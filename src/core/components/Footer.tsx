@@ -7,7 +7,7 @@ export function Footer() {
         <footer className="footer">
             <span>Justin Morton</span>
             <a href="https://github.com/JustinWMorton" target="_blank" rel="noopener noreferrer">
-                <img src={require('../../shared/ui/images/github-mark-white.svg').default} className="github-logo" />
+                <img src={require('../../shared/ui/images/github-mark-white.svg').default} className="github-logo" alt="oops" />
             </a>
         </footer>
     );
