@@ -1,0 +1,27 @@
+@import '@ui/Styles.css';
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--header-color); /* Background color */
+    border-top: 2px solid var(--border-color); /* Add border to the top */
+    padding: 10px; /* Add some padding */
+    text-align: center;
+    color: var(--text-color); /* Text color */
+}
+
+.footer a {
+    color: var(--link-color); /* Golden color for links */
+    text-decoration: none; /* Remove underline from links */
+    margin-left: 10px; /* Add some space between the text and the logo */
+}
+
+.footer a:hover {
+    text-decoration: underline; /* Underline links on hover */
+}
+
+.github-logo {
+    width: 24px; /* Set the width of the logo */
+    height: 24px; /* Set the height of the logo */
+}

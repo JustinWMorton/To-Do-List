@@ -1,0 +1,94 @@
+@import '@ui/Styles.css';
+
+.home-container {
+    width: 100%; 
+    max-width: 900px; 
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-color: var(--body-color);
+    border: 2px solid var(--border-color); /* Add border with --border-color */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: var(--text-color); /* Ensure the text color is set to --text-color */
+}
+
+.task-input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.task-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: var(--text-color); /* Ensure the text color is set to --text-color */
+    background-color: var(--body-color); /* Ensure the background color matches the body color */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Add space between buttons */
+}
+
+.add-task-button, .delete-task-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-task-button {
+    background-color: var(--submit-button); /* Use the submit button color */
+    color: var(--button-text-color);
+}
+
+.delete-task-button {
+    background-color: var(--delete-button); /* Use the delete button color */
+    color: var(--button-text-color);
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
+
+.task-list {
+    list-style-type: none;
+    padding: 0;
+    color: var(--text-color); /* Ensure the text color is set to --text-color */
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    color: var(--text-color); /* Ensure the text color is set to --text-color */
+}
+
+.task-item.completed .task-title {
+    text-decoration: line-through;
+}
+
+.task-checkbox {
+    margin-right: 10px;
+    accent-color: var(--submit-button); /* Change the checkbox color when checked */
+}
+
+.task-title {
+    flex-grow: 1;
+    text-align: left;
+    color: var(--text-color); /* Ensure the text color is set to --text-color */
+}
+
+.task-age {
+    font-size: 0.9em;
+    color: var(--text-color); /* Ensure the text color is set to --text-color */
+}

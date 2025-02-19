@@ -1,0 +1,19 @@
+:root {
+    --button-color: #b3b3b3 ;
+    --button-text-color: white;
+    --background-color: black;
+    --body-color: black;
+    --border-color: white;
+    --header-color: black;
+    --text-color: white;
+    --link-color: #F8F9FA;
+    --submit-button: #28a745;
+    --delete-button: #dc3545;
+}
+
+body {
+    background-color: var(--background-color);
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
