@@ -1,6 +1,14 @@
 # To-Do List React Web App by Justin Morton
 Simple React web app that will take in your name and allow you to keep track of some things you want to do. When you are done you can either cross them out or delete them.
 
+## Screenshots
+
+### Home Page
+![Home Page](./public/To-Do-List_Screenshot)
+
+### My Profile Page
+![My Profile Page](./public/My-Profile_Screenshot)
+
 ## Available Scripts
 
 In the project directory, you can run:

@@ -50,6 +50,14 @@ export function Home() {
         setTasks(tasks.filter(task => task.id !== taskId));
     };
 
+    // Sort tasks so that completed tasks are at the bottom and not completed tasks are sorted by newest first
+    const sortedTasks = [...tasks].sort((a, b) => {
+        if (a.completed === b.completed) {
+            return b.id - a.id; // Sort by newest first
+        }
+        return a.completed ? 1 : -1; // Move completed tasks to the bottom
+    });
+
     return (
         <div className="home-container">
             <h1 className='header-text'>{name}'s To-Do List</h1>
@@ -66,7 +74,7 @@ export function Home() {
                 {errorMessage && <p className="error-message">{errorMessage}</p>}
             </div>
             <ul className="task-list">
-                {tasks.map(task => (
+                {sortedTasks.map(task => (
                     <li key={task.id} className={`task-item ${task.completed ? 'completed' : ''}`}>
                         <input
                             type="checkbox"
