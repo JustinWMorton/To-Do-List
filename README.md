@@ -4,10 +4,10 @@ Simple React web app that will take in your name and allow you to keep track of 
 ## Screenshots
 
 ### Home Page
-![Home Page](./public/To-Do-List_Screenshot)
+![Home Page](./public/To-Do-List_Screenshot.png)
 
 ### My Profile Page
-![My Profile Page](./public/My-Profile_Screenshot)
+![My Profile Page](./public/My-Profile_Screenshot.png)
 
 ## Available Scripts
 
