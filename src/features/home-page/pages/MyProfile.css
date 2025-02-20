@@ -24,10 +24,12 @@
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid;
     border-radius: 4px;
-    color: var(--text-color);
-    background-color: var(--body-color);
+    border-color: var(--border-color);
+    color: var(--text-color); 
+    background-color: var(--body-color); 
+    font: var(--text-font);
 }
 
 .profile-button {
@@ -37,4 +39,5 @@
     cursor: pointer;
     background-color: var(--submit-button);
     color: var(--button-text-color);
+    font: var(--button-text-font);
 }

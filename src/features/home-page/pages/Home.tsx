@@ -12,6 +12,7 @@ export function Home() {
     const { name } = useContext(UserContext);
     const [tasks, setTasks] = useState<Task[]>([]);
     const [newTask, setNewTask] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
 
     useEffect(() => {
         const savedTasks = localStorage.getItem(`tasks_${name}`);
@@ -25,10 +26,14 @@ export function Home() {
     }, [tasks, name]);
 
     const addTask = () => {
-        if (newTask.trim() === '') return;
+        if (newTask.trim() === '') {
+            setErrorMessage('Task cannot be blank');
+            return;
+        }
         const newTaskObj = { id: Date.now(), title: newTask, completed: false };
         setTasks([...tasks, newTaskObj]);
         setNewTask('');
+        setErrorMessage(''); // Clear the error message after adding a task
     };
 
     const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
@@ -47,7 +52,7 @@ export function Home() {
 
     return (
         <div className="home-container">
-            <h1>{name}'s To-Do List</h1>
+            <h1 className='header-text'>{name}'s To-Do List</h1>
             <div className="task-input-container">
                 <input
                     type="text"
@@ -58,6 +63,7 @@ export function Home() {
                     placeholder="Add a new task"
                 />
                 <button className="add-task-button" onClick={addTask}>Add Task</button>
+                {errorMessage && <p className="error-message">{errorMessage}</p>}
             </div>
             <ul className="task-list">
                 {tasks.map(task => (

@@ -3,18 +3,19 @@
 .header {
     display: flex;
     align-items: center;
-    background-color: var(--header-color); /* Background color */
+    background-color: var(--header-color);
     border-bottom: 2px solid var(--border-color); /* Add border to the bottom */
-    padding: 10px; /* Add some padding */
+    padding: 10px;
     text-align: center;
+    font: var(--text-font);
 }
 
 .header span {
-    color: var(--text-color); /* Text color for span elements */
+    color: var(--text-color); 
 }
 
 .header a {
-    color: var(--link-color); /* Link color */
+    color: var(--link-color); 
     text-decoration: none; /* Remove underline from links */
 }
 
@@ -23,18 +24,21 @@
 }
 
 .separator {
+    color: var(--link-color);
     margin: 0 10px;
-    color: var(--text-color); /* Color for separator */
 }
 
 .nav-container {
     display: flex;
+    justify-content: center;
     align-items: center;
     width: 100%;
 }
 
 .nav {
     display: flex;
+    align-items: center;
+    gap: 10px;
     flex-grow: 1;
 }
 
@@ -42,19 +46,10 @@
     margin: 0 10px;
     text-decoration: none;
     color: var(--link-color);
+    font-weight: bold;
 }
 
 .nav.disabled a {
     pointer-events: none;
     color: gray;
-}
-
-.logout-button {
-    margin-left: auto; /* Push the button to the far right */
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    background-color: var(--delete-button); /* Use the delete button color */
-    color: white;
 }

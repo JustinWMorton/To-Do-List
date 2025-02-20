@@ -1,15 +1,13 @@
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './Header.css';
 
 export function Header() {
-    const location = useLocation();
-    const isAuthPage = location.pathname === '/login' || location.pathname === '/register';
-
     return (
         <header className="header">
             <div className="nav-container">
-                <nav className={`nav ${isAuthPage ? 'disabled' : ''}`}>
+                <nav className="nav">
                     <Link to="/">Home</Link>
+                    <span className="separator">|</span>
                     <Link to="/my-profile">My Profile</Link>
                     {/* Add other navigation links here */}
                 </nav>

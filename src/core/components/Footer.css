@@ -4,15 +4,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--header-color); /* Background color */
-    border-top: 2px solid var(--border-color); /* Add border to the top */
-    padding: 10px; /* Add some padding */
+    background-color: var(--header-color); 
+    border-top: 2px solid var(--border-color); 
+    padding: 10px; 
     text-align: center;
-    color: var(--text-color); /* Text color */
+    color: var(--text-color); 
+    font: var(--text-font);
 }
 
 .footer a {
-    color: var(--link-color); /* Golden color for links */
+    color: var(--link-color);
     text-decoration: none; /* Remove underline from links */
     margin-left: 10px; /* Add some space between the text and the logo */
 }
@@ -22,6 +23,6 @@
 }
 
 .github-logo {
-    width: 24px; /* Set the width of the logo */
-    height: 24px; /* Set the height of the logo */
+    width: 24px; 
+    height: 24px; 
 }

@@ -1,14 +1,17 @@
 :root {
     --button-color: #b3b3b3 ;
-    --button-text-color: white;
-    --background-color: black;
-    --body-color: black;
-    --border-color: white;
-    --header-color: black;
-    --text-color: white;
-    --link-color: #F8F9FA;
+    --button-text-color: #F5F5F5;
+    --background-color: #0f0f0f;
+    --body-color: #0f0f0f;
+    --border-color: #27272a;
+    --header-color: #0f0f0f;
+    --text-color: #F5F5F5;
+    --link-color: #F5F5F5;
     --submit-button: #28a745;
     --delete-button: #dc3545;
+    --header-text-font: bold 24px/1.5 Helvetica, sans-serif;
+    --text-font: 16px/1.5 Helvetica, sans-serif;
+    --button-text-font: 14px/1 Helvetica, sans-serif;
 }
 
 body {

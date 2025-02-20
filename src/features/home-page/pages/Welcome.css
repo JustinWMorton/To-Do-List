@@ -26,8 +26,10 @@
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    color: var(--text-color);
-    background-color: var(--body-color);
+    border-color: var(--border-color);
+    color: var(--text-color); 
+    background-color: var(--body-color); 
+    font: var(--text-font);
 }
 
 .welcome-button {
@@ -37,4 +39,14 @@
     cursor: pointer;
     background-color: var(--submit-button);
     color: var(--button-text-color);
+    font: var(--button-text-font);
+}
+
+.header-text {
+    font: var(--header-text-font);
+}
+
+.error-message {
+    color:  var(--delete-button);
+    margin-top: 10px;
 }

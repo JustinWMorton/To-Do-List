@@ -23,7 +23,7 @@ export function MyProfile() {
 
     return (
         <div className="profile-container">
-            <h1>Enter a new name if you would like!</h1>
+            <h1 className='header-text'>Enter a new name if you would like!</h1>
             <div className="profile-input-container">
                 <input
                     type="text"

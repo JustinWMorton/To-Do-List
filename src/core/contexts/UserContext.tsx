@@ -1,44 +1,32 @@
-import React, { JSX, SetStateAction, useEffect } from "react";
+import React, { createContext, useState, useEffect } from 'react';
 
-interface IUserContext {
+interface UserContextProps {
     name: string;
-    setName: React.Dispatch<SetStateAction<string>>;
-    isAuthenticated: boolean;
-    logout: () => void;
+    setName: (name: string) => void;
 }
-const UserContext = React.createContext<IUserContext>({
-    name: "default",
+
+export const UserContext = createContext<UserContextProps>({
+    name: '',
     setName: () => {},
-    isAuthenticated: false,
-    logout: () => {},
 });
 
-interface IUserContextProvider {
-    children: JSX.Element;
+interface UserContextProviderProps {
+    children: React.ReactNode;
 }
 
-const UserContextProvider = ({children}: IUserContextProvider) => {
-    const [name, setName] = React.useState(localStorage.getItem('username') || "default");
-    const [isAuthenticated, setIsAuthenticated] = React.useState(name !== "default");
-
-    const logout = () => {
-        setName("default");
-        setIsAuthenticated(false);
-        localStorage.removeItem('username');
-    };
+export const UserContextProvider: React.FC<UserContextProviderProps> = ({ children }) => {
+    const [name, setName] = useState('');
 
     useEffect(() => {
-        if (name !== "default") {
-            localStorage.setItem('username', name);
-            setIsAuthenticated(true);
-        } else {
-            setIsAuthenticated(false);
+        const storedName = localStorage.getItem('username');
+        if (storedName) {
+            setName(storedName);
         }
-    }, [name]);
+    }, []);
 
-    return <UserContext.Provider value={{name, setName, isAuthenticated, logout}}>
-        {children}
-    </UserContext.Provider>
-}
-
-export { UserContext, UserContextProvider };
+    return (
+        <UserContext.Provider value={{ name, setName }}>
+            {children}
+        </UserContext.Provider>
+    );
+};
