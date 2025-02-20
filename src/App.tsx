@@ -21,7 +21,7 @@ function App() {
           <div className="content">
             <Routes>
               <Route path="/welcome" element={<Welcome />} />
-              <Route path="/" element={isNameSet ? <Home /> : <Navigate to="/welcome" />} />
+              <Route path="/" element={isNameSet ? <Home /> : <Navigate to="/To-Do-List/welcome" />} />
               <Route path="/my-profile" element={<MyProfile />} />
             </Routes>
           </div>
