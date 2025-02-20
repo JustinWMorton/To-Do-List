@@ -1,9 +1,9 @@
-import React, { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import './App.css';
 import { Header, Footer } from '@core';
 import { TaskProvider, UserContextProvider, UserContext } from '@contexts';
 import { Home, Welcome, MyProfile } from '@pages';
-import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 
 function App() {
   const { name } = useContext(UserContext);
@@ -17,17 +17,15 @@ function App() {
     <TaskProvider>
       <UserContextProvider>
         <div className="app-container">
-          <Router>
-            <Header />
-            <div className="content">
-              <Routes>
-                <Route path="/welcome" element={<Welcome />} />
-                <Route path="/" element={isNameSet ? <Home /> : <Navigate to="/welcome" />} />
-                <Route path="/my-profile" element={<MyProfile />} />
-              </Routes>
-            </div>
-            <Footer />
-          </Router>
+          <Header />
+          <div className="content">
+            <Routes>
+              <Route path="/welcome" element={<Welcome />} />
+              <Route path="/" element={isNameSet ? <Home /> : <Navigate to="/welcome" />} />
+              <Route path="/my-profile" element={<MyProfile />} />
+            </Routes>
+          </div>
+          <Footer />
         </div>
       </UserContextProvider>
     </TaskProvider>
